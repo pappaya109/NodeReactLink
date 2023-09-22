@@ -1,0 +1,46 @@
+.headerWrapper {
+    /* background: aquamarine; */
+    height: 8em;
+    /* padding: 2em 0em 1em 0em; */
+    padding-top: 2em;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 80%;
+    margin: auto;
+}
+
+
+.categoryNav {
+    margin-right: 30em;
+}
+.categoryNav > .navLink {
+    font-size: large;
+    font-weight: 500;
+    margin: 0em 0.5em;
+}
+
+.userNav {
+    margin-right: 1em;
+}
+
+.userNav > .navLink,
+.infoNav > .navLink {
+    margin: 0em 0.3em;
+    font-size: 0.9em;
+}
+
+.navLink {
+    color: black;
+    text-decoration: none;
+}
