@@ -1,7 +1,5 @@
 .headerWrapper {
-    /* background: aquamarine; */
     height: 8em;
-    /* padding: 2em 0em 1em 0em; */
     padding-top: 2em;
 }
 
@@ -15,15 +13,11 @@
 .navContainer {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content:space-between;
     width: 80%;
     margin: auto;
 }
 
-
-.categoryNav {
-    margin-right: 30em;
-}
 .categoryNav > .navLink {
     font-size: large;
     font-weight: 500;
@@ -43,4 +37,5 @@
 .navLink {
     color: black;
     text-decoration: none;
+    letter-spacing: -0.1em;
 }

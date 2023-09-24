@@ -7,9 +7,9 @@ const Main = () => {
     return (
         <div className={styles.mainWrapper}>
             <Carousel className={styles.banner}>
-                <Carousel.Item>
-
-                </Carousel.Item>
+                {/* <Carousel.Item>
+                    <div width={200}>sample</div>
+                </Carousel.Item> */}
             </Carousel>
             <section className={styles.mainContainer}>
                 <div className={styles.controller}>

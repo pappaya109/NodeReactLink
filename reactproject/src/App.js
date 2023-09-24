@@ -7,11 +7,9 @@ import Login from './components/Login'
 import Products from './components/Products'
 import Details from './components/Details'
 import { Reset } from 'styled-reset'
-import axios from 'axios';
+import Footer from './components/Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
-
-  axios.get('/api')
-  .then((result)=>{return(console.log(result))})
 
   return (
     <div>
@@ -24,6 +22,7 @@ function App() {
         <Route path='/products' element={<Products />}></Route>
         <Route path='/details' element={<Details/>}></Route>
       </Routes>
+      <Footer/>
     </div>
   );
 }
