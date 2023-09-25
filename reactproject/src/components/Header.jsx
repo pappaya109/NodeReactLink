@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Header.module.css'
+import Login from './Login'
 const Header = () => {
     return (
         <div className={styles.headerWrapper}>
@@ -25,6 +26,7 @@ const Header = () => {
                     <Link to="#" className={styles.navLink}>로그아웃</Link>
                 </div>
             </nav>
+                <Login />
         </div>
     )
 }
