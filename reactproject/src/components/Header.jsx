@@ -1,7 +1,11 @@
 import React,{ useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Header.module.css'
+<<<<<<< HEAD
 import { modalStore } from '../App'
+=======
+import Login from './Login'
+>>>>>>> 48fb1b3304487f1db366164cbef4b5d60d62bd84
 const Header = () => {
     const {showModal, setShowModal} = useContext(modalStore);
     return (
@@ -27,6 +31,7 @@ const Header = () => {
                     {/* <Link to="#" className={styles.navLink}>로그아웃</Link> */}
                 </div>
             </nav>
+                <Login />
         </div>
     )
 }
