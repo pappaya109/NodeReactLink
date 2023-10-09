@@ -1,28 +1,37 @@
 import { Routes, Route, } from 'react-router-dom'
+import { createContext, useContext, useState } from 'react';
 import './App.css';
 import Header from './components/Header'
-import Main from './components/Main'
+import Main from './pages/Main'
 import Join from './components/Join'
 import Login from './components/Login'
-import Products from './components/Products'
-import Details from './components/Details'
+import Products from './pages/Products'
+import Details from './pages/Details'
 import { Reset } from 'styled-reset'
 import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
-function App() {
+export const modalStore = createContext();
 
+function App() {
+  const [showModal, setShowModal] = useState(false);
   return (
     <div>
-      <Reset/>
-      <Header/>
+      <modalStore.Provider value={{ showModal, setShowModal }}>
+      { 
+        showModal === true ?
+        <Login /> :
+        null
+      } 
+      <Reset />
+        <Header />
+      </modalStore.Provider>
       <Routes>
-        <Route path='/' element={<Main/>}></Route>
-        <Route path='/login' element={<Login />}></Route>
+        <Route path='/' element={<Main />}></Route>
         <Route path='/join' element={<Join />}></Route>
         <Route path='/products' element={<Products />}></Route>
-        <Route path='/details' element={<Details/>}></Route>
+        <Route path='/details' element={<Details />}></Route>
       </Routes>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

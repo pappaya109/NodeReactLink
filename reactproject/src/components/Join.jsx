@@ -13,13 +13,11 @@ const Join = () => {
     const [otherInfo, setOtherInfo] = useState([]);
     /** 아이디 중복확인 */
     const checkId = (e) => {
-        console.log(idRef.current.value)
         e.preventDefault();
         axios.post('user/chkId', {
             id: idRef.current.value
         })
             .then(res => {
-                console.log(res.data)
                 if (res.data.msg == 'uniq') {
                     setIdChecked(true)
                     btnRef.current.disabled = true;
@@ -34,12 +32,12 @@ const Join = () => {
     
     const joinHandler = (e) => {
         e.preventDefault();
-        console.log(pwRef)
-        if (idChecked == true) {
-            if(pwRef.current[0] == pwRef.current[1]) {
+        console.log('pwref',pwRef)
+        if (idChecked) {
+            if(pwRef.current[0].value === pwRef.current[1].value) {
                 pwRef.current[1].nextSibling.style.color = 'green';
                 setPwChk('비밀번호 확인');
-                axios.post('/user/join', {
+                axios.post('user/join', {
                     id: idRef.current.value,
                     pw: pwRef.current[0].value,
                     user_name: otherInfo[0],
@@ -50,11 +48,11 @@ const Join = () => {
             else {
                 pwRef.current[1].nextSibling.style.color = 'red';
                 setPwChk('비밀번호를 다시 입력해주세요');
+                console.log('chk Pw',pwRef.current[0].value)
             }
         } else {
             alert('아이디 중복확인을 해주세요!')
         }
-        console.log(pwChk)
     }
 
     return (
@@ -110,7 +108,7 @@ const Join = () => {
                         onChange={e=>setOtherInfo(otherInfo.concat(e.target.value))}>
                         </Form.Control>
                     </Form.Group>
-                    <Button variant="primary" type="submit">
+                    <Button variant="primary" type='submit'>
                         가입하기
                     </Button>
                 </Row>

@@ -1,0 +1,36 @@
+.LoginModalWrapper {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    width: 100%;
+    height: 130vh;
+    background-color: rgba(90,90,90,0.5);
+    z-index: 11;
+    /* position: absolute; */
+    position: fixed;
+}
+
+.modal {
+    position: absolute;
+    top: 7em;
+    z-index: 2;
+    /* background: rgb(245,245,245); */
+    background: linear-gradient(180deg, rgb(230,230,230) 0%,rgb(255,255,255) 30%);
+    width: 32em;
+    height: 26em;
+    padding: 4em 3em;
+    box-sizing: border-box;
+    /* padding: 3em 2em 0em 2em; */
+    border-radius: 1em;
+    box-shadow: 0em 0em 1.5em rgba(10, 10, 10, 0.5);
+}
+.modal > h2 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.exitBtn {
+    position: relative;
+    left: 26em;
+    bottom: 2em;
+}
