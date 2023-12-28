@@ -23,7 +23,6 @@ router.post('/chkId', (req, res) => {
 
 // 회원가입 
 router.post('/join', (req, res)=>{
-<<<<<<< HEAD
     console.log('join router',req.body)
     const {id, pw, email, user_name, address} = req.body
     let sql = 'INSERT INTO user_table (id, pw, email, user_name, address) value(?, ?, ?, ?, ?)'
@@ -39,26 +38,28 @@ router.post('/join', (req, res)=>{
             })
         }
     })
-=======
-    console.log(req.body)
-    let {id, pw, user_name, email, address} = req.body;
-    let sql = 'INSERT INTO user_table (id, pw, user_name, email, address) VALUES(?, ?, ?, ?, ?)'
-    conn.query(sql, [id, pw, user_name, email, address], (err, rows)=>{
-        if(rows) {
-            res.json({ msg: 'success'})
-        } else {
-            res.json({ msg: 'failed'})
-        }
-    })
+  
 })
 
 // 로그인 
 router.post('/login', (req, res)=>{
-    console.log('Login Router', req.body);
+    let { id, pw } = req.body;
     let sql = 'SELECT user_name FROM user_table WHERE id = ? AND pw = ?'
     conn.query(sql, [id, pw], (err,rows)=>{
+        if(rows) {
+            console.log(rows)
+            res.json({
+                msg: 'login success'
+            })
+        }
+        else {
+            res.json({
+                msg: 'login failed',
+                user_name : rows
+            })
+        }
+        console.log(rows)
         
     })
->>>>>>> 48fb1b3304487f1db366164cbef4b5d60d62bd84
 })
 module.exports = router;

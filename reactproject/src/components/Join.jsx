@@ -21,6 +21,7 @@ const Join = () => {
                 if (res.data.msg == 'uniq') {
                     setIdChecked(true)
                     btnRef.current.disabled = true;
+                    idRef.current.disabled = true;
                     textRef.current.style.color = 'green';
                     setText('사용가능한 아이디입니다')
                 } else {
@@ -44,6 +45,7 @@ const Join = () => {
                     email: otherInfo[1],
                     address: otherInfo[2]
                 })
+                
             } 
             else {
                 pwRef.current[1].nextSibling.style.color = 'red';
