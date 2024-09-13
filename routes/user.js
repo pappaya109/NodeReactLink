@@ -49,13 +49,13 @@ router.post('/login', (req, res)=>{
         if(rows) {
             console.log(rows)
             res.json({
-                msg: 'login success'
+                msg: 'login success',
+                user_name : rows[0].user_name
             })
         }
         else {
             res.json({
-                msg: 'login failed',
-                user_name : rows
+                msg: 'login failed'
             })
         }
         console.log(rows)

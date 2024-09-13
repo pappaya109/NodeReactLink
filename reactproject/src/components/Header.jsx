@@ -11,9 +11,9 @@ const Header = () => {
             <nav className={styles.navContainer}>
                 {/* 로그인 했을 때 */}
                 <ul className={styles.userNav}>
-                    <Link to="#" className={styles.navLink}><img src="./search.png" alt="search" width={25} /></Link>
-                    <Link to="#" className={styles.navLink}><img src="./cart.png" alt="cart" width={25} /></Link>
-                    <Link to="#" className={styles.navLink}><img src="./user.png" alt="mypage" width={25} /></Link>
+                    <Link to="#" className={styles.navLink}><img src="./search.png" alt="search" width={20} /></Link>
+                    <Link to="#" className={styles.navLink}><img src="./cart.png" alt="cart" width={20} /></Link>
+                    <Link to="/myinfo" className={styles.navLink}><img src="./user.png" alt="mypage" width={20} /></Link>
                 </ul>
                 
                 <ul className={styles.categoryNav}>

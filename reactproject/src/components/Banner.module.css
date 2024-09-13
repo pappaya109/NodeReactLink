@@ -1,10 +1,32 @@
 .banner {
-    background-color: gray;
+    background: rgb(212, 187, 139);
     width: 100%;
-    height: 18em;
     margin-bottom: 2em;
 }
 
 .banner_item {
     height: 18em;
+    background-size: 76em;
+    background-position-x: 0em;
+    background-position-y: -14.5em;
+    background-repeat: no-repeat;
+
+}
+.transparent {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 18em;
+    position: absolute;
+    left: 0;
+}
+
+.titles {
+    text-align: center;
+    width: 100%;
+    font-size: 2.3em;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    /* left: 13em ; */
+    bottom: 3.5em;
 }

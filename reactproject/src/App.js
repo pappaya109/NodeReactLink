@@ -10,6 +10,7 @@ import Details from './pages/Details'
 import { Reset } from 'styled-reset'
 import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import MyInfo from './pages/MyInfo';
 export const modalStore = createContext();
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Main />}></Route>
         <Route path='/join' element={<Join />}></Route>
+        <Route path='/myinfo' element={<MyInfo />}></Route>
         <Route path='/products' element={<Products />}></Route>
         <Route path='/details' element={<Details />}></Route>
       </Routes>

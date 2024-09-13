@@ -16,7 +16,14 @@ const Login = () => {
         pw : pwRef.current.value
         })
         .then( res => {
-            
+            console.log(res)
+            if(res.data.msg === 'login success') {
+                setShowModal(false)
+                alert('로그인에 성공했습니다!')
+                window.location.href='/'
+            } else {
+                
+            }
         })
     }
 
